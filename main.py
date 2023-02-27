@@ -37,6 +37,9 @@ for x in range(3):
     elif(player == "s" and computer == "r"):
         print("computer wins")
         pcscore += 1
+    elif(player == "g"):
+        print("player wins")
+        RCPscore += 1
     else:
         (player == "p" and computer == "s")
         print("computer wins")
