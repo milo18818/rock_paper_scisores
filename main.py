@@ -1,4 +1,21 @@
 from random import randint
+
+
+def get_chosen():
+    chosen = randint(1, 3)
+    comp = 0
+
+    if chosen == 1:
+        comp = "r"
+    elif chosen == 2:
+        comp = "p"
+    else:
+        if chosen == 3:
+            comp = "s"
+
+    return comp
+
+
 RCPscore = 0
 pcscore = 0
 
@@ -12,15 +29,8 @@ for x in range (int(round)):
     player = input("pick: rock (R), paper (P), scisores (S)")
     player = player.lower()
     print(player,"vs", end=" ")
-    chosen = randint(1,3)
-    computer = 0
-    if (chosen == 1):
-        computer = "r"
-    elif(chosen == 2):
-        computer = "p"
-    else:
-        if(chosen == 3):
-            computer = "s"
+    computer = get_chosen()
+
     print (computer)
 
     if player == computer:
@@ -66,6 +76,7 @@ for x in range (int(round)):
             print("blocked")
         if player == "b" and computer == "s":
             print("blocked")
+
 print("your score is " + str(RCPscore) + " the computers score is " + str(pcscore))
 if RCPscore > pcscore:
     print("!PLAYER WINS!")
