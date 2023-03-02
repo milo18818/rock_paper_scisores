@@ -21,46 +21,46 @@ pcscore = 0
 
 print("select gamemode")
 gametype = input()
-if gametype == ("s"):
+if gametype == "s":
     print("special powers enabled")
 print("best of ___")
-round = input()
-for x in range (int(round)):
+game_round = input()
+for x in range(int(game_round)):
     player = input("pick: rock (R), paper (P), scisores (S)")
     player = player.lower()
-    print(player,"vs", end=" ")
+    print(player, "vs", end=" ")
     computer = get_chosen()
 
-    print (computer)
+    print(computer)
 
     if player == computer:
         print("draw")
-    elif(player == "r" and computer == "s"):
+    elif player == "r" and computer == "s":
         print("player wins")
         RCPscore += 1
-    elif(player == "r" and computer == "p"):
+    elif player == "r" and computer == "p":
         print("computer wins")
         pcscore += 1
-    elif(player == "p" and computer == "r"):
+    elif player == "p" and computer == "r":
         print("player wins")
         RCPscore += 1
-    elif(player == "p" and computer == "s"):
+    elif player == "p" and computer == "s":
         print("computer wins")
         pcscore += + 1
-    elif(player == "s" and computer == "p"):
+    elif player == "s" and computer == "p":
         print("player wins")
         RCPscore += 1
-    elif(player == "s" and computer == "r"):
+    elif player == "s" and computer == "r":
         print("computer wins")
         pcscore += 1
-    elif(player == "g"):
+    elif player == "g":
         print("player wins")
         RCPscore += 1
     else:
         if player == "p" and computer == "s":
-          print("computer wins")
+            print("computer wins")
 
-    if gametype == ("s"):
+    if gametype == "s":
         if player == "d" and computer == "r":
             print("test")
             pcscore -= 1
